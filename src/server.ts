@@ -1,7 +1,7 @@
 import { createServer, Server } from 'http';
 import app from './app';
-import envVars from './app/config/env';
 import connectToDB from './app/db/connectToDB';
+import { envVars } from './app/config/env';
 
 const server: Server = createServer(app);
 

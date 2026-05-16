@@ -10,7 +10,7 @@ interface IEnvItems {
 
 config();
 
-const loadEnv = (): IEnvItems => {
+const loadEnvVariables = (): IEnvItems => {
   const requiredVariables: Array<keyof IEnvItems> = [
     'PORT',
     'NODE_ENV',
@@ -34,5 +34,4 @@ const loadEnv = (): IEnvItems => {
   };
 };
 
-const envVars = loadEnv();
-export default envVars;
+export const envVars = loadEnvVariables();

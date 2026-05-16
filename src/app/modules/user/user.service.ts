@@ -2,9 +2,8 @@ import { User } from './user.model';
 
 // get all user==>
 const getAllUser = async () => {
-  const response = await User.find({});
-  const updatedResponse = response?.map(({ password, ...rest }) => rest);
-  return updatedResponse;
+  const response = await User.find({}).select('-password');
+  return response;
 };
 
 export const UserServices = {
